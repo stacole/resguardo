@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2e6fd53b02968a5818c8e06082f12e464ff1399e3357ae3e8eacbdf07a259b35"
+            "sha256": "98511ce13a777f88c9a3d8d9c1aa17957bcf64f326b3dde961bcd56f32f52ae5"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -47,6 +47,13 @@
             ],
             "index": "pypi",
             "version": "==0.11"
+        },
+        "django-query-inspector": {
+            "hashes": [
+                "sha256:d171d0861ff40e63bf5f23d511868db2f5584e3616a82be555963ec0dd72e465"
+            ],
+            "index": "pypi",
+            "version": "==1.1.11"
         },
         "duckdb": {
             "hashes": [

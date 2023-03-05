@@ -6,7 +6,7 @@ from jsignature.fields import JSignatureField
 
 
 
-class Signature(models.Model):
+class Firma(models.Model):
 	class Meta:
 		verbose_name_plural = 'resguardos'
 	nombre = models.CharField(max_length=32, blank=True, null=True)
@@ -20,3 +20,4 @@ class Signature(models.Model):
 	def __str__(self):
 
 		return str(self.name)
+	
