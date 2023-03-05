@@ -18,7 +18,7 @@
 
 
   
-    <div class="container border">
+    <!-- <div class="container border">
       <br />
       <form action="{% url 'home' %}" method="post">
         {% csrf_token %}
@@ -56,17 +56,17 @@
           </div>
         </div>
 
-        <br /><br />
+        <br /><br /> -->
 
         {{ form.media }}
-        <form action="." method="POST">
-            {% for field in form %}
-                {{ field.label_tag }}
-                {{ field }}
-            {% endfor %}
-            <input type="submit" value="Save"/>
-            {% csrf_token %}
-        </form>
+    <form action="." method="POST">
+        {% for field in form %}
+            {{ field.label_tag }}
+            {{ field }}
+        {% endfor %}
+        <input type="submit" value="Save"/>
+        {% csrf_token %}
+    </form>
   
         <input class="btn btn-primary" type="submit" value="Submit">
         

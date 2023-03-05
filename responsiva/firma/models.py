@@ -1,5 +1,6 @@
 from inspect import signature
 from django.db import models
+from jsignature.fields import JSignatureField
 
 # Create your models here.
 
@@ -14,7 +15,7 @@ class Signature(models.Model):
 	posicion = models.CharField(max_length=50, blank=True, null=True)
 	dispositivo = models.CharField(max_length=50, blank=True, null=True)
 	detalles = models.CharField(max_length=50, blank=True, null=True)
-	signature = models.CharField(max_length=50, blank=True, null=True)
+	firma = JSignatureField(blank=True, null=True)
 
 	def __str__(self):
 
