@@ -1,0 +1,79 @@
+{% extends 'responsiva/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container form" id="form">
+  <div class="row title hidden-print">
+    <div class="col-sm-6">
+      <h1>Resguardo de equipo</h1>
+    </div>
+    <div class="col-sm-6 text-right"><a class="btn btn-success" id="exportForm">Exportar a PDF</a></div>
+  </div>
+  <div id="first-page">
+    <div class="row title">
+      <div class="col-sm-12">
+        <h2>Responsiva</h2>
+      </div>
+    </div>
+
+
+  
+    <div class="container border">
+      <br />
+      <form action="{% url 'home' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="text">Nombre:</label>
+          <input type="tetx" class="form-control text-info border-info border-top-0 border-left-0 border-right-0" id="name" placeholder="Nombre" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="text">GID:</label>
+          <input type="tetx" class="form-control text-info border-info border-top-0 border-left-0 border-right-0" id="apell" placeholder="Apellidos" name="apell" required>
+        </div>
+        <div class="form-group">
+          <label for="text">Departamento:</label>
+          <input type="tetx" class="form-control text-info border-info border-top-0 border-left-0 border-right-0" id="apell" placeholder="Apellidos" name="apell" required>
+        </div>
+        <div class="form-group">
+          <label for="text">Pocisión:</label>
+          <input type="tetx" class="form-control text-info border-info border-top-0 border-left-0 border-right-0" id="apell" placeholder="Apellidos" name="apell" required>
+        </div>
+        <div class="form-group">
+          <label for="text">Dispositivo:</label>
+          <input type="tetx" class="form-control text-info border-info border-top-0 border-left-0 border-right-0" id="apell" placeholder="Apellidos" name="apell" required>
+        </div>
+        <div class="form-group">
+          <label for="text">Detalles:</label>
+          <input type="tetx" class="form-control text-info border-info border-top-0 border-left-0 border-right-0" id="apell" placeholder="Apellidos" name="apell" required>
+        </div>
+  
+        <br /><br />
+
+        <div class="row hidden-print">
+          <div class="col-sm-12 form-group">
+            <label>Firma</label>
+            {{form.signature}}
+          </div>
+        </div>
+
+        <br /><br />
+
+        {{ form.media }}
+        <form action="." method="POST">
+            {% for field in form %}
+                {{ field.label_tag }}
+                {{ field }}
+            {% endfor %}
+            <input type="submit" value="Save"/>
+            {% csrf_token %}
+        </form>
+  
+        <input class="btn btn-primary" type="submit" value="Submit">
+        
+      </form>
+    </div>
+    
+
+    
+  </div>
+{% endblock %}
